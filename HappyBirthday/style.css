@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.center {
+  margin-top: 120px;
+}
+
+button {
+  padding: 12px 22px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#yesBtn, #yesBtn2 {
+  background-color: #ff6f91;
+}
+
+#noBtn, #noBtn2 {
+  background-color: #999;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.envelope-wrapper {
+  position: relative;
+  width: 250px;
+  height: 180px;
+  margin: auto;
+  cursor: pointer;
+}
+
+.envelope {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ff6f91;
+  border-radius: 10px;
+}
+
+
+.flap {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+  border-bottom: 90px solid #ff3f6c;
+  top: 0;
+  transform-origin: top;
+  transition: transform 0.6s ease;
+}
+
+
+.letter {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background: white;
+  color: black;
+  top: 10px;
+  left: 5%;
+  border-radius: 10px;
+  padding: 10px;
+  transform: translateY(20px) scale(0.8);
+  opacity: 0;
+  transition: all 0.6s ease;
+  overflow: hidden;
+}
+
+.open .flap {
+  transform: rotateX(-180deg);
+}
+
+.open .letter {
+  transform: translateY(-80px) scale(1);
+  opacity: 1;
+}
+
+.photo {
+  width: 110px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+
+.heart {
+  position: fixed;
+  font-size: 20px;
+  pointer-events: none;
+}
